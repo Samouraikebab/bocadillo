@@ -12,7 +12,6 @@
         $contacts[] = ['id' => $id, 'lastname' => $lastname, 'firstname' => $firstname, 'phone' => $phone, 'email' => $email];
     }
     echo $twig->render("contact.list2.html", ['contacts' => $contacts]);
-    
 
     $stmt->close();
     $mysqli->close();
