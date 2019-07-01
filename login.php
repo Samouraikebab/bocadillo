@@ -8,6 +8,7 @@ if($_POST){
 	$password = $_POST["password"];
 	$username = $_POST["username"];
 
+	$aze = "rien";
 	$rty = 0;
 	
 	$rencontreProbleme = false;
@@ -23,7 +24,7 @@ if($_POST){
 		$message .= "- le password ne doit pas être vide<br/>";
 	}
 	
-	
+
 	if (!$rencontreProbleme){
         $stmt = $mysqli->stmt_init();
         $stmt->prepare("SELECT * FROM user WHERE username = ? and password = ?");
