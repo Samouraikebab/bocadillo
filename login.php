@@ -5,8 +5,8 @@ require("mysql.init.php");
 
 if($_POST){
 	
-	$username = $_POST["username"];
 	$password = $_POST["password"];
+	$username = $_POST["username"];
 	
 	$rencontreProbleme = false;
 	$message = '';
