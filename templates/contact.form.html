@@ -1,0 +1,33 @@
+<form id="form" action="contact.form.php" method="post">
+  <input id="id" type="hidden" name="id" value="{{id}}" />
+  <input
+    id="lastname"
+    type="text"
+    name="lastname"
+    placeholder="Doe"
+    oninput="checkName()"
+  />
+  <input
+    id="firstname"
+    type="text"
+    name="firstname"
+    placeholder="John"
+    oninput="checkName()"
+  />
+  <input
+    id="phone"
+    type="tel"
+    name="phone"
+    placeholder="0684235791"
+    oninput="checkContact()"
+  />
+  <input
+    id="email"
+    type="email"
+    name="email"
+    placeholder="email@example.com"
+    oninput="checkContact()"
+  />
+  <button id="submit">send</button>
+  <button type="button" id="cancel" style="display: none" onclick="cancelEdit()">cancel</button>
+</form>

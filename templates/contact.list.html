@@ -1,0 +1,31 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Lastname</th>
+      <th scope="col">Firstname</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+    {% for contact in contacts %}
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ contact.id }}</th>
+      <td>{{ contact.lastname }}</td>
+      <td>{{ contact.firstname }}</td>
+      <td>{{ contact.phone }}</td>
+      <td>{{ contact.email }}</td>
+      <td>
+        <a href="index.php?route=edit&id={{ contact.id }}" >edit</a>
+      </td>
+      <td>
+        <a href="contact.delete.php?id={{ contact.id }}" onclick="return window.confirm('delete contact?')">delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+    </tr>
+  </tbody>
+</table>

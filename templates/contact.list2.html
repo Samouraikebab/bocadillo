@@ -1,0 +1,23 @@
+<div class="container">
+  <div class='row principal'>
+
+    {% for contact in contacts %}
+    <div class='col-3' style="margin-bottom: 20px;">
+
+      <a style="height: 50px;width: 100%;" class="btn btn-primary " data-toggle="collapse"
+        href="#collapseExample-{{ contact.id }}" role="button" aria-expanded="false" aria-controls="collapseExample">
+        {{contact.lastname}}
+      </a>
+
+      <div class="collapse" id="collapseExample-{{ contact.id }}">
+        <div class="card card-body">
+          Lastname : {{contact.lastname}} </br>
+          Firstname : {{contact.firstname}} </br>
+          Phone : {{contact.phone}} </br>
+          Email : {{contact.email}}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
