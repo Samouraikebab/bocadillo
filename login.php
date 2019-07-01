@@ -23,6 +23,7 @@ if($_POST){
 		$message .= "- le password ne doit pas être vide<br/>";
 	}
 	
+	
 	if (!$rencontreProbleme){
         $stmt = $mysqli->stmt_init();
         $stmt->prepare("SELECT * FROM user WHERE username = ? and password = ?");
