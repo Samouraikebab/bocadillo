@@ -7,9 +7,6 @@ if($_POST){
 	
 	$password = $_POST["password"];
 	$username = $_POST["username"];
-
-	$aze = "rien";
-	$rty = 0;
 	
 	$rencontreProbleme = false;
 	$message = '';
